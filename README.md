@@ -1,1 +1,0 @@
-# Big-Fact-Hunt---A-Quiz-App
