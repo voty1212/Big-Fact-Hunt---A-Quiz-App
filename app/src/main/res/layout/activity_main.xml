@@ -124,7 +124,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/MunjaniShubham"
                 android:text="Already have an account"
                 app:backgroundTint="#7B1FA2"
                 app:cornerRadius="20dp" />
