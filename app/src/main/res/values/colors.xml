@@ -11,4 +11,6 @@
     <color name="brown">#4BDC3232</color>
     <color name="red">#E10A0A</color>
     <color name="purple">#673AB7</color>
+    <color name="light_gray">#FF626165</color>
+
 </resources>
