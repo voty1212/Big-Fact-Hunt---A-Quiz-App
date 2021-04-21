@@ -10,39 +10,51 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        android:layout_height="192dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.146"
         app:srcCompat="@drawable/bigfacthunt" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="333dp"
-        android:layout_height="485dp"
+        android:layout_width="299dp"
+        android:layout_height="370dp"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="60dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="460dp"
+            android:layout_height="match_parent"
             android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:padding="8dp"
+            android:paddingLeft="20dp">
 
             <TextView
                 android:id="@+id/textView"
@@ -51,7 +63,7 @@
                 android:layout_marginTop="15dp"
                 android:autoText="false"
                 android:gravity="center"
-                android:text="Enter the Details."
+                android:text="Welcome Back!"
                 android:textColor="#E91E63"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -86,25 +98,38 @@
                 android:inputType="numberPassword"
                 android:padding="8dp" />
 
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:paddingRight="5dp"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                tools:text="Forgot your Password?" />
+
             <Button
                 android:id="@+id/submitbutton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Submit"
+                android:text="Login"
                 app:backgroundTint="#7B1FA2"
                 app:cornerRadius="20dp" />
 
-            <EditText
-                android:id="@+id/editTextTextPersonName"
+            <Button
+                android:id="@+id/alreadyaccountbutton2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:gravity="right"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:paddingRight="5dp"
-                android:text="Forget Password?" />
+                android:layout_gravity="center"
+                android:text="Create Account"
+                app:backgroundTint="#7B1FA2"
+                app:cornerRadius="20dp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

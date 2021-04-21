@@ -129,14 +129,14 @@
                 app:cornerRadius="20dp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/privacypolicy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="*By signinig , you agree to accecpt the privacy policies and terms and conditions."
-                android:textColor="#C2185B"
+                android:textColor="#D32F2F"
                 android:textSize="8sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
