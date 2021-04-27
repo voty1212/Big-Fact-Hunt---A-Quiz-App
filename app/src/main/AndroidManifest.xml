@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizUs">
-        <activity android:name=".Instructions"></activity>
+        <activity android:name=".mainActivity"></activity>
         <activity android:name=".loginActivity" />
         <activity android:name=".signup">
             <intent-filter>

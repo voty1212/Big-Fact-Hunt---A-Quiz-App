@@ -1,22 +1,22 @@
 package com.example.quizus;
 
 public class categoryModel {
-    private String categpryId, categoryName, cateogoryImage;
+    private String categoryId, categoryName, categoryImage;
 
-    public categoryModel(String categpryId, String categoryName, String cateogoryImage) {
-        this.categpryId = categpryId;
+    public categoryModel(String categoryId, String categoryName, String categoryImage) {
+        this.categoryId = categoryId;
         this.categoryName = categoryName;
-        this.cateogoryImage = cateogoryImage;
+        this.categoryImage = categoryImage;
     }
 
     public categoryModel(){}
 
-    public String getCategpryId() {
-        return categpryId;
+    public String getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategpryId(String categpryId) {
-        this.categpryId = categpryId;
+    public void setCategoryId(String categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getCategoryName() {
@@ -27,11 +27,11 @@ public class categoryModel {
         this.categoryName = categoryName;
     }
 
-    public String getCateogoryImage() {
-        return cateogoryImage;
+    public String getCategoryImage() {
+        return categoryImage;
     }
 
-    public void setCateogoryImage(String cateogoryImage) {
-        this.cateogoryImage = cateogoryImage;
+    public void setCategoryImage(String categoryImage) {
+        this.categoryImage = categoryImage;
     }
 }
