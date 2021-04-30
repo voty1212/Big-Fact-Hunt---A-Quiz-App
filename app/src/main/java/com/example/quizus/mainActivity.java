@@ -29,4 +29,4 @@ public class mainActivity extends AppCompatActivity {
         binding.categoryList.setAdapter(adapter);
 
     }
-}
+} 
