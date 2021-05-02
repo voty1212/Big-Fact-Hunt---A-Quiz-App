@@ -6,9 +6,7 @@
     <item android:id="@+id/Rank"
         android:title="Rank"
         android:icon="@drawable/ic_ranking"/>
-    <item android:id="@+id/Wallet"
-        android:title="Wallet"
-        android:icon="@drawable/ic_wallet"/>
+
     <item android:id="@+id/profile"
         android:title="Profile"
         android:icon="@drawable/ic_profile"/>
