@@ -12,8 +12,9 @@
         <activity android:name=".resultActivity"></activity>
         <activity android:name=".quizActivity" />
         <activity android:name=".mainActivity" />
-        <activity android:name=".loginActivity" />
-        <activity android:name=".signup">
+        <activity android:name=".signup"/>
+        <activity android:name=".loginActivity" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
