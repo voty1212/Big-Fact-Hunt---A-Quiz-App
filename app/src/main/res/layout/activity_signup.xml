@@ -10,12 +10,16 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="185dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
         android:layout_marginTop="15dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
         android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.581"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
@@ -111,7 +115,7 @@
                 android:padding="8dp" />
 
             <Button
-                android:id="@+id/submitbutton"
+                android:id="@+id/createNewBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

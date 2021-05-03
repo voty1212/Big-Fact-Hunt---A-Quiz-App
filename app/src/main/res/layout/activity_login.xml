@@ -114,7 +114,7 @@
                 tools:text="Forgot your Password?" />
 
             <Button
-                android:id="@+id/submitbutton"
+                android:id="@+id/createNewBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
