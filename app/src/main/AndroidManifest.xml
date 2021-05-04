@@ -9,8 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizUs">
-        <activity android:name=".resultActivity"></activity>
-        <activity android:name=".quizActivity" />
+        <activity android:name=".resultActivity">
+
+        </activity>
+        <activity android:name=".quizActivity" >
+
+        </activity>
+
+
         <activity android:name=".mainActivity" />
         <activity android:name=".signup">
 
@@ -23,6 +29,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
 
         </activity>
 

@@ -127,7 +127,7 @@
                 app:cornerRadius="20dp" />
 
             <Button
-                android:id="@+id/alreadyaccountbutton2"
+                android:id="@+id/createAccBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
