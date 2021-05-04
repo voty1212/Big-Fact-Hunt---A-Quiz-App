@@ -9,17 +9,17 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="185dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
         android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
@@ -28,13 +28,13 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="333dp"
-        android:layout_height="485dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="35dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,16 +43,16 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="460dp"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:padding="2dp">
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="5dp"
                 android:autoText="false"
                 android:gravity="center"
                 android:text="Creating Account"
@@ -73,7 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:background="@drawable/textbox"
                 android:drawablePadding="10dp"
                 android:ems="10"
@@ -85,7 +85,7 @@
                 android:id="@+id/emailbox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:background="@drawable/textbox"
                 android:ems="10"
                 android:hint="email"
@@ -96,7 +96,7 @@
                 android:id="@+id/passwordbox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:background="@drawable/textbox"
                 android:ems="10"
                 android:hint="Password"
@@ -107,7 +107,7 @@
                 android:id="@+id/refercodebox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:background="@drawable/textbox"
                 android:ems="10"
                 android:hint="Refer code"
@@ -119,6 +119,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="5dp"
                 android:text="Submit"
                 app:backgroundTint="#7B1FA2"
                 app:cornerRadius="20dp" />
@@ -128,11 +129,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="5dp"
                 android:text="Already have an account"
                 app:backgroundTint="#7B1FA2"
                 app:cornerRadius="20dp" />
 
-            <EditText
+            <TextView
                 android:id="@+id/privacypolicy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
