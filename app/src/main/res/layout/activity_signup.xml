@@ -55,7 +55,7 @@
                 android:layout_marginTop="5dp"
                 android:autoText="false"
                 android:gravity="center"
-                android:text="Creating Account"
+                android:text="Create An Account"
                 android:textColor="#E91E63"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -75,11 +75,13 @@
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
                 android:background="@drawable/textbox"
+                android:drawableLeft="@drawable/user"
                 android:drawablePadding="10dp"
+                android:drawableTint="@color/purple"
                 android:ems="10"
                 android:hint="Your Name"
                 android:inputType="textPersonName"
-                android:padding="8dp" />
+                android:padding="15dp" />
 
             <EditText
                 android:id="@+id/emailbox"
@@ -87,10 +89,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:background="@drawable/textbox"
+                android:drawableLeft="@drawable/email"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/purple"
                 android:ems="10"
                 android:hint="email"
                 android:inputType="textEmailAddress"
-                android:padding="8dp" />
+                android:padding="15dp" />
 
             <EditText
                 android:id="@+id/passwordbox"
@@ -98,10 +103,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:background="@drawable/textbox"
+                android:drawableLeft="@drawable/password"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/purple"
                 android:ems="10"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:padding="8dp" />
+                android:padding="15dp" />
 
             <EditText
                 android:id="@+id/refercodebox"
@@ -109,10 +117,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:background="@drawable/textbox"
+                android:drawableLeft="@drawable/user"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/purple"
                 android:ems="10"
                 android:hint="Refer code"
                 android:inputType="textPersonName"
-                android:padding="8dp" />
+                android:padding="15dp" />
 
             <Button
                 android:id="@+id/createNewBtn"

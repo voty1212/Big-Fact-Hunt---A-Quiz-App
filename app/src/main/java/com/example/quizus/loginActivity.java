@@ -3,6 +3,7 @@ package com.example.quizus;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +19,7 @@ public class loginActivity extends AppCompatActivity {
 
     ActivityLoginBinding binding;
     FirebaseAuth auth;
-
+    ProgressDialog dialog;
 
 
     @Override
@@ -28,6 +29,10 @@ public class loginActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         auth = FirebaseAuth.getInstance();
+
+        dialog = new ProgressDialog(this);
+        dialog.setMessage("Logging in...");
+
         binding.loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,12 +41,15 @@ public class loginActivity extends AppCompatActivity {
                 email = binding.emailbox.getText().toString();
                 pass = binding.passwordbox.getText().toString();
 
+                dialog.show();
                 auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        dialog.dismiss();
                         if(task.isSuccessful()){
 
-                            Toast.makeText(loginActivity.this, "Success", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(loginActivity.this, mainActivity.class));
+                            finish();
                         }
                         else
                         {
