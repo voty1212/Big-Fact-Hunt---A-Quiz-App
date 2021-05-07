@@ -28,18 +28,6 @@ public class mainActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.toolbar);
 
-        ArrayList<categoryModel> categories = new ArrayList<>();
-        categories.add(new categoryModel("" , "Mathematics", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
-        categories.add(new categoryModel("" , "Science", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
-        categories.add(new categoryModel("" , "History", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
-        categories.add(new categoryModel("" , "Language", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
-
-        categoryAdapter adapter = new categoryAdapter(this, categories);
-
-
-
-        binding.categoryList.setLayoutManager(new GridLayoutManager(this,2));
-        binding.categoryList.setAdapter(adapter);
 
     }
 } 
