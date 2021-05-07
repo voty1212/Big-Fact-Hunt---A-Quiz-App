@@ -18,34 +18,25 @@ import java.util.ArrayList;
 public class mainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
-    FirebaseFirestore database;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //Srinivasan
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        database = FirebaseFirestore.getInstance();
+        setSupportActionBar(binding.toolbar);
 
         ArrayList<categoryModel> categories = new ArrayList<>();
+        categories.add(new categoryModel("" , "Mathematics", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
+        categories.add(new categoryModel("" , "Science", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
+        categories.add(new categoryModel("" , "History", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
+        categories.add(new categoryModel("" , "Language", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
 
         categoryAdapter adapter = new categoryAdapter(this, categories);
 
-        database.collection("categories")
-                .addSnapshotListener(new EventListener<QuerySnapshot>() {
-                    @Override
-                    public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
-                        categories.clear();
-                        for(DocumentSnapshot snapshot : value.getDocuments()){
-                            categoryModel model = snapshot.toObject(categoryModel.class);
-                            model.setCategoryId(snapshot.getId());
-                            categories.add(model);
-                        }
-                        adapter.notifyDataSetChanged();
-                    }
-                });
+
 
         binding.categoryList.setLayoutManager(new GridLayoutManager(this,2));
         binding.categoryList.setAdapter(adapter);
