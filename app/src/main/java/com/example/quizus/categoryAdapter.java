@@ -1,6 +1,7 @@
 package com.example.quizus;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +35,16 @@ public class categoryAdapter extends RecyclerView.Adapter<categoryAdapter.catego
         categoryModel model = categoryModels.get(position);
 
         holder.textView.setText(model.getCategoryName());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, quizActivity.class);
+                intent.putExtra("catId", model.getCategoryId());
+                context.startActivity(intent);
+            }
+        });
+
     }
 
     @Override
