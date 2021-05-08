@@ -10,7 +10,8 @@
         android:id="@+id/view4"
         android:layout_width="wrap_content"
         android:layout_height="130dp"
-        android:background="@drawable/background_bottom" />
+        android:background="@drawable/background_bottom"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/view5"
@@ -70,7 +71,7 @@
         android:layout_marginRight="16dp"
         android:fontFamily="@font/roboto_bold"
         android:gravity="center"
-        android:text="What is your Name? how are you ? may god bless you. Do your best, never quit, just keep going."
+        android:text=""
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/view5"
