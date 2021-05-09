@@ -33,8 +33,8 @@ public class quizActivity extends AppCompatActivity {
         questions.add(new Question("What is earth?", "Planet", "car", "bike", "book", "Planet"));
         questions.add(new Question("What is samosa?", "Planet", "car", "bike", "Food", "Food"));
 
-        setNextQuestion();
         reset_timer();
+        setNextQuestion();
     }
     void reset_timer(){
         timer=new CountDownTimer(30000,1000) {
@@ -52,9 +52,9 @@ public class quizActivity extends AppCompatActivity {
     }
 
     void setNextQuestion(){
-        reset_timer();
         if(timer !=null)
             timer.cancel();
+
         timer.start();
         if(index < questions.size()){
             binding.questionCounter.setText(String.format("%d/%d",(index+1),(questions.size())));
