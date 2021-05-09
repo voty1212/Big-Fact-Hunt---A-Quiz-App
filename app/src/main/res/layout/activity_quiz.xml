@@ -71,7 +71,7 @@
         android:layout_marginRight="16dp"
         android:fontFamily="@font/roboto_bold"
         android:gravity="center"
-        android:text=""
+        android:text="yo, whassup?"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/view5"

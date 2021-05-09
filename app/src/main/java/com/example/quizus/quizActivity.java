@@ -26,7 +26,7 @@ public class quizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityQuizBinding.inflate(getLayoutInflater());
-        setContentView(R.layout.activity_quiz);
+        setContentView(binding.getRoot());
 
         questions = new ArrayList<>();
 
