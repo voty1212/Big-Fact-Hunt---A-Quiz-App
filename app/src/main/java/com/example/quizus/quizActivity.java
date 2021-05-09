@@ -9,8 +9,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.quizus.databinding.ActivityQuizBinding;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class quizActivity extends AppCompatActivity {
 
@@ -21,6 +26,7 @@ public class quizActivity extends AppCompatActivity {
     int index = 0;
     Question question;
     CountDownTimer timer;
+    FirebaseFirestore database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +35,53 @@ public class quizActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         questions = new ArrayList<>();
+        database = FirebaseFirestore.getInstance();
 
-        questions.add(new Question("What is earth?", "Planet", "car", "bike", "book", "Planet"));
-        questions.add(new Question("What is samosa?", "Planet", "car", "bike", "Food", "Food"));
+       final String catId = getIntent().getStringExtra("catId");
+
+        Random random = new Random();
+       final int rand = random.nextInt(15);
+
+        database.collection("categories")
+                .document(catId)
+                .collection("questions")
+                .whereGreaterThanOrEqualTo("index", rand)
+                .orderBy("index")
+                .limit(5).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                if(queryDocumentSnapshots.getDocuments().size() < 5){
+                    database.collection("categories")
+                            .document(catId)
+                            .collection("questions")
+                            .whereLessThanOrEqualTo("index", rand)
+                            .orderBy("index")
+                            .limit(5).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                        @Override
+                        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+
+                                for(DocumentSnapshot snapshot : queryDocumentSnapshots){
+                                    Question question = snapshot.toObject(Question.class);
+                                    questions.add(question);
+                                }
+                            setNextQuestion();
+                            }
+
+
+                    });
+                } else {
+                    for(DocumentSnapshot snapshot : queryDocumentSnapshots){
+                        Question question = snapshot.toObject(Question.class);
+                        questions.add(question);
+                    }
+                    setNextQuestion();
+                }
+
+            }
+        });
 
         reset_timer();
-        setNextQuestion();
+
     }
     void reset_timer(){
         timer=new CountDownTimer(30000,1000) {
