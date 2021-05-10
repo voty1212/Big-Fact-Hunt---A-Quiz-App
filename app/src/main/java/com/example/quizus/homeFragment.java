@@ -38,10 +38,10 @@ public class homeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
 
         ArrayList<categoryModel> categories = new ArrayList<>();
-        categories.add(new categoryModel("tLUsOBmUTDvqkR7vPU9R" , "Mathematics", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
-        categories.add(new categoryModel("T2Xo3D4HxSYVAHU8uiBw", "Science", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
-        categories.add(new categoryModel("PXdA0HZuokdUfIZroPWJ" , "History", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
-        categories.add(new categoryModel("6RtSS0AsdwPqEB8d8t4p" , "Language", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
+        categories.add(new categoryModel("maths123" , "Mathematics", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
+        categories.add(new categoryModel("science123", "Science", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
+        categories.add(new categoryModel("history123" , "History", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
+        categories.add(new categoryModel("language123" , "Language", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
 
         categoryAdapter adapter = new categoryAdapter(getContext(), categories);
 

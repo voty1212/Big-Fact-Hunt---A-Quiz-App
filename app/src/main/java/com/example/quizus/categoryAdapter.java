@@ -32,7 +32,7 @@ public class categoryAdapter extends RecyclerView.Adapter<categoryAdapter.catego
 
     @Override
     public void onBindViewHolder(@NonNull categoryViewHolder holder, int position) {
-        categoryModel model = categoryModels.get(position);
+       final categoryModel model = categoryModels.get(position);
 
         holder.textView.setText(model.getCategoryName());
 
@@ -40,6 +40,7 @@ public class categoryAdapter extends RecyclerView.Adapter<categoryAdapter.catego
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, quizActivity.class);
+               // intent.putExtra("catId",model.getCategoryId());
                 intent.putExtra("catId", model.getCategoryId());
                 context.startActivity(intent);
             }

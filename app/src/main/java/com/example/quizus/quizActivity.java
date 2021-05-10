@@ -181,7 +181,7 @@ public class quizActivity extends AppCompatActivity {
 // questions hardcoded
 public class quizActivity extends AppCompatActivity {
     ActivityQuizBinding binding;
-    ArrayList<Question> questions;
+    ArrayList<Question> questions, questionMaths;
     int index = 0;
     Question question;
     CountDownTimer timer;
@@ -191,6 +191,7 @@ public class quizActivity extends AppCompatActivity {
         binding = ActivityQuizBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         questions = new ArrayList<>();
+        questionMaths = new ArrayList<>();
 
         questions.add(new Question("Which of these chemical elements is heavier than iron?", "gold", "potassium", "carbon", "manganese", "gold"));
         questions.add(new Question("A baby blue whale drinks this many liters of milk per day:", "190", "250", "20", "50", "190"));
@@ -208,10 +209,27 @@ public class quizActivity extends AppCompatActivity {
         questions.add(new Question("How many laws are there in Kepler's planetary motion?", "3", "5", "7", "1", "3"));
         questions.add(new Question("This isotope of hydrogen is also known as heavy hydrogen:", "Protium", "Polonium", "Deuterium", "Tritium", "Deuterium"));
 
+        questionMaths.add(new Question("In poker, what are the odds of drawing a royal flush?","327,123 to 1","649,740 to 1","1,243,961 to 1","1,704,199 to 1","649,740 to 1"));
+        questionMaths.add(new Question("What is the best way to represent a subset?","pie chart","Venn diagram","table","exploding diagram","Venn diagram"));
+        questionMaths.add(new Question("In Roman numerals, what is represented by the letter C?","1,000","100","10","50","100"));
+        questionMaths.add(new Question("What is a polygon with three sides called?","rectangle","square","parallelogram","triangle","triangle"));
+        questionMaths.add(new Question("Find the missing terms in multiple of 3: 3, 6, 9, __, 15","10","11","12","13","12"));
+        questionMaths.add(new Question("What is the next prime number after 5?","6","7","9","11","7"));
+        questionMaths.add(new Question("In triangle ABC, if AB=BC and ∠B = 70°, ∠A will be:","70","110","55","130","55"));
+        questionMaths.add(new Question("If ABC and DBC are two isosceles triangles on the same base BC. Then:","∠ABD = ∠ACD","∠ABD = ∠ACD","∠ABD < ∠ACD","None of the above","∠ABD = ∠ACD"));
+        questionMaths.add(new Question("The sum of all the angles of a quadrilateral is equal to:___ degrees","180","270","360","90","360"));
+        questionMaths.add(new Question("A rhombus can be a:","Parallelogram","Parallelogram","Kite","Square","Square"));
+        questionMaths.add(new Question(" If ABCD is a trapezium in which AB || CD and AD = BC, then:","∠A = ∠B","∠A > ∠B","∠A < ∠B"," None of the above","∠A = ∠B"));
+        questionMaths.add(new Question("The probability of each event lies between:","1 & 2","1 & 10","0 & 1","0 & 5","0 & 1"));
+        questionMaths.add(new Question("If P(E) = 0.44, then P(not E) will be:","0.44","0.55","0.50","0.56","0.56"));
+        questionMaths.add(new Question(" x2-2x+1 is a polynomial in:","One Variable","Two Variables","Three Variables","None of the above","One Variable"));
+        questionMaths.add(new Question(" A binomial of degree 20 in the following is:","20x + 1","x/20 + 1","x^20 +1","x2+20","x^20 +1"));
 
         reset_timer();
         setNextQuestion();
     }
+
+    
     void reset_timer(){
         timer=new CountDownTimer(30000,1000) {
             @Override
@@ -230,16 +248,33 @@ public class quizActivity extends AppCompatActivity {
                     timer.cancel();
 
                 timer.start();
-                if(index < questions.size()){
-                    binding.questionCounter.setText(String.format("%d/%d",(index+1),(questions.size())));
-                    question = questions.get(index);
-                    binding.question.setText(question.getQuestion());
-                    binding.option1.setText(question.getOption1());
-                    binding.option2.setText(question.getOption2());
-                    binding.option3.setText(question.getOption3());
-                    binding.option4.setText(question.getOption4());
+                final String catId = getIntent().getStringExtra("catId");
+                if(catId == "science123") {
+                    if (index < questions.size()) {
+                        binding.questionCounter.setText(String.format("%d/%d", (index + 1), (questions.size())));
+                        question = questions.get(index);
+                        binding.question.setText(question.getQuestion());
+                        binding.option1.setText(question.getOption1());
+                        binding.option2.setText(question.getOption2());
+                        binding.option3.setText(question.getOption3());
+                        binding.option4.setText(question.getOption4());
+                    }
+                }
+                else {
+
+                    if (index < questionMaths.size()) {
+                        binding.questionCounter.setText(String.format("%d/%d", (index + 1), (questionMaths.size())));
+                        question = questionMaths.get(index);
+                        binding.question.setText(question.getQuestion());
+                        binding.option1.setText(question.getOption1());
+                        binding.option2.setText(question.getOption2());
+                        binding.option3.setText(question.getOption3());
+                        binding.option4.setText(question.getOption4());
+                    }
                 }
             }
+
+
             void show_answer(){
                 if(question.getAnswer().equals(binding.option1.getText().toString()))
                     binding.option1.setBackground(getResources().getDrawable(R.drawable.option_right));
