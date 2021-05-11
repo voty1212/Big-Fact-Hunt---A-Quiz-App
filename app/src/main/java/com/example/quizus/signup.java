@@ -41,13 +41,14 @@ public class signup extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String email, pass, name, referCode;
+                int coinPoints = 0;
 
                 email = binding.emailbox.getText().toString();
                 pass = binding.passwordbox.getText().toString();
                 name = binding.namebox.getText().toString();
                 referCode = binding.refercodebox.getText().toString();
 
-                user user = new user(name, email, pass, referCode);
+                user user = new user(name, email, pass, referCode,coinPoints);
 
                 dialog.show();
                 auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {

@@ -17,7 +17,8 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.Random;
-/* fetching questions using database
+/*
+ //fetching questions using database
 public class quizActivity extends AppCompatActivity {
 
     ActivityQuizBinding binding;
@@ -175,8 +176,8 @@ public class quizActivity extends AppCompatActivity {
     }
 
 }
+*/
 
- */
 
 
 // questions hardcoded
