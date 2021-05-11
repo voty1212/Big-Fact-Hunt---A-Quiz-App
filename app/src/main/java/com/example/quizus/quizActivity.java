@@ -248,8 +248,12 @@ public class quizActivity extends AppCompatActivity {
                     timer.cancel();
 
                 timer.start();
+              //  String s1 = "maths";
+                String s2 = "science";
+               // String s3 = "history";
+               // String s4 = "language";
                 final String catId = getIntent().getStringExtra("catId");
-                if(catId == "science123") {
+                if(s2.equals(catId)) {
                     if (index < questions.size()) {
                         binding.questionCounter.setText(String.format("%d/%d", (index + 1), (questions.size())));
                         question = questions.get(index);
@@ -272,7 +276,7 @@ public class quizActivity extends AppCompatActivity {
                         binding.option4.setText(question.getOption4());
                     }
                 }
-            }
+           }
 
 
             void show_answer(){
