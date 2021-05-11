@@ -181,7 +181,7 @@ public class quizActivity extends AppCompatActivity {
 // questions hardcoded
 public class quizActivity extends AppCompatActivity {
     ActivityQuizBinding binding;
-    ArrayList<Question> questions, questionMaths;
+    ArrayList<Question> questionScience, questionMaths, questionGk, questionHistory;
     int index = 0;
     Question question;
     CountDownTimer timer;
@@ -190,24 +190,26 @@ public class quizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityQuizBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        questions = new ArrayList<>();
+        questionScience = new ArrayList<>();
         questionMaths = new ArrayList<>();
+        questionGk = new ArrayList<>();
+        questionHistory = new ArrayList<>();
 
-        questions.add(new Question("Which of these chemical elements is heavier than iron?", "gold", "potassium", "carbon", "manganese", "gold"));
-        questions.add(new Question("A baby blue whale drinks this many liters of milk per day:", "190", "250", "20", "50", "190"));
-        questions.add(new Question("In physics, for every action there is an equal and opposite what?", "subtraction", "reaction", "distraction", "impaction", "reaction"));
-        questions.add(new Question("Which of the following technological developments came first?", "teletype", "telephone", "telegraph", "telescope", "telescope"));
-        questions.add(new Question("Moths are a member of what order?", "lepidoptera", "optica", "leprosy", "octagon", "lepidoptera"));
-        questions.add(new Question("For what is the Jurassic period named?", "the French word for 'day'", "a soccer hero", "a mountain range", "a kind of dinosaur", "a mountain range"));
-        questions.add(new Question("What kind of substance makes litmus paper turn blue?", "Base", "Alkali", "Acid", "Salt", "Alkali"));
-        questions.add(new Question("Which of these particles was discovered by J.J. Thompson?", "Electron", "Neutron", "Proton", "Atom", "Electron"));
-        questions.add(new Question("Which of these chemicals help fruit to ripen?", "Methane", "Carbon dioxide", "Nitrogen oxide", "Ethylene", "Ethylene"));
-        questions.add(new Question("The layer of the atmosphere in which weather occurs is called the:", "Stratosphere", "Ionosphere", "Mesosphere", "Troposphere", "Troposphere"));
-        questions.add(new Question("What is the International System of Units (SI) name for a unit of magnetic flux?", "Ampere", "Weber", "Coulomb", "Tesla", "Weber"));
-        questions.add(new Question("Who is the only woman to have won two Nobel Prizes in two different fields?", "Irène Joliot-Curie", "Lise Meitner", "Ève Curie", "Marie Curie", "Marie Curie"));
-        questions.add(new Question("Faraday is a unit of measurement for:", "Electricity", "Power", "Sound", "Temperature", "Electricity"));
-        questions.add(new Question("How many laws are there in Kepler's planetary motion?", "3", "5", "7", "1", "3"));
-        questions.add(new Question("This isotope of hydrogen is also known as heavy hydrogen:", "Protium", "Polonium", "Deuterium", "Tritium", "Deuterium"));
+        questionScience.add(new Question("Which of these chemical elements is heavier than iron?", "gold", "potassium", "carbon", "manganese", "gold"));
+        questionScience.add(new Question("A baby blue whale drinks this many liters of milk per day:", "190", "250", "20", "50", "190"));
+        questionScience.add(new Question("In physics, for every action there is an equal and opposite what?", "subtraction", "reaction", "distraction", "impaction", "reaction"));
+        questionScience.add(new Question("Which of the following technological developments came first?", "teletype", "telephone", "telegraph", "telescope", "telescope"));
+        questionScience.add(new Question("Moths are a member of what order?", "lepidoptera", "optica", "leprosy", "octagon", "lepidoptera"));
+        questionScience.add(new Question("For what is the Jurassic period named?", "the French word for 'day'", "a soccer hero", "a mountain range", "a kind of dinosaur", "a mountain range"));
+        questionScience.add(new Question("What kind of substance makes litmus paper turn blue?", "Base", "Alkali", "Acid", "Salt", "Alkali"));
+        questionScience.add(new Question("Which of these particles was discovered by J.J. Thompson?", "Electron", "Neutron", "Proton", "Atom", "Electron"));
+        questionScience.add(new Question("Which of these chemicals help fruit to ripen?", "Methane", "Carbon dioxide", "Nitrogen oxide", "Ethylene", "Ethylene"));
+        questionScience.add(new Question("The layer of the atmosphere in which weather occurs is called the:", "Stratosphere", "Ionosphere", "Mesosphere", "Troposphere", "Troposphere"));
+        questionScience.add(new Question("What is the International System of Units (SI) name for a unit of magnetic flux?", "Ampere", "Weber", "Coulomb", "Tesla", "Weber"));
+        questionScience.add(new Question("Who is the only woman to have won two Nobel Prizes in two different fields?", "Irène Joliot-Curie", "Lise Meitner", "Ève Curie", "Marie Curie", "Marie Curie"));
+        questionScience.add(new Question("Faraday is a unit of measurement for:", "Electricity", "Power", "Sound", "Temperature", "Electricity"));
+        questionScience.add(new Question("How many laws are there in Kepler's planetary motion?", "3", "5", "7", "1", "3"));
+        questionScience.add(new Question("This isotope of hydrogen is also known as heavy hydrogen:", "Protium", "Polonium", "Deuterium", "Tritium", "Deuterium"));
 
         questionMaths.add(new Question("In poker, what are the odds of drawing a royal flush?","327,123 to 1","649,740 to 1","1,243,961 to 1","1,704,199 to 1","649,740 to 1"));
         questionMaths.add(new Question("What is the best way to represent a subset?","pie chart","Venn diagram","table","exploding diagram","Venn diagram"));
@@ -224,6 +226,22 @@ public class quizActivity extends AppCompatActivity {
         questionMaths.add(new Question("If P(E) = 0.44, then P(not E) will be:","0.44","0.55","0.50","0.56","0.56"));
         questionMaths.add(new Question(" x2-2x+1 is a polynomial in:","One Variable","Two Variables","Three Variables","None of the above","One Variable"));
         questionMaths.add(new Question(" A binomial of degree 20 in the following is:","20x + 1","x/20 + 1","x^20 +1","x2+20","x^20 +1"));
+
+        questionGk.add(new Question("The book, ‘Dalits in India: A Profile,’ was written by …","Amitabh Bagchi"," Vikram Seth","Sukhadeo Thorat"," Amitabh Ghosh","Sukhadeo Thorat"));
+        questionGk.add(new Question("Which among the following is the nearest to earth planet?","Mercury","Venus","Mars","Neptune","Venus"));
+        questionGk.add(new Question("National Sugar Research Institute is located in …","Kanpur","Dhanbad","Karnal","Lucknow","Kanpur"));
+        questionGk.add(new Question("National Emblem of the United States is ……….","Kangaroo","White Lily","Rose","Lily","Rose"));
+        questionGk.add(new Question("The trophy ‘Amrit Diwan Cup’ is related to …","Hockey","Badminton","Football","Basketball","Badminton"));
+        questionGk.add(new Question("The First Modern Olympics were played in …","1896","1866","1826","1926","1896"));
+        questionGk.add(new Question("Which among the following is popular as Pillars of Hercules?","English Channel","Leaning Tower","Eiffel Tower","Strait of Gibraltar","Strait of Gibraltar"));
+        questionGk.add(new Question("Pentagon is located in …","UK","USA","Russia","Italy","USA"));
+        questionGk.add(new Question("Atomic Energy Commission is located in …","Jadugoda","Mumbai","Trombay","Hyderabad","Mumbai"));
+        questionGk.add(new Question("Which among the following was the first city attacked by atom bomb?","Hiroshima","Nagasaki","Yokohoma","Kawasaki","Hiroshima"));
+        questionGk.add(new Question("Air Defence Guided Missiles School is located in …","Kolkata","Bengaluru","Gopalpur","Guindy","Gopalpur"));
+        questionGk.add(new Question("The playing area of Archery is known as …","Rink","Track","Ring","Range","Range"));
+        questionGk.add(new Question("Ctrl, Shift and Alt are called .......... keys.","modifier","function","alphanumeric","adjustment","modifier"));
+        questionGk.add(new Question("The tropic of cancer does not pass through which of these Indian states ?","Madhya Pradesh","West Bengal","Rajasthan","Odisha","Odisha"));
+        questionGk.add(new Question("Fathometer is used to measure","Earthquakes","Rainfall","Ocean depth","Sound intensity","Ocean depth"));
 
         reset_timer();
         setNextQuestion();
@@ -248,15 +266,15 @@ public class quizActivity extends AppCompatActivity {
                     timer.cancel();
 
                 timer.start();
-              //  String s1 = "maths";
+                String s1 = "maths";
                 String s2 = "science";
                // String s3 = "history";
-               // String s4 = "language";
+                String s4 = "gk";
                 final String catId = getIntent().getStringExtra("catId");
                 if(s2.equals(catId)) {
-                    if (index < questions.size()) {
-                        binding.questionCounter.setText(String.format("%d/%d", (index + 1), (questions.size())));
-                        question = questions.get(index);
+                    if (index < questionScience.size()) {
+                        binding.questionCounter.setText(String.format("%d/%d", (index + 1), (questionScience.size())));
+                        question = questionScience.get(index);
                         binding.question.setText(question.getQuestion());
                         binding.option1.setText(question.getOption1());
                         binding.option2.setText(question.getOption2());
@@ -264,8 +282,8 @@ public class quizActivity extends AppCompatActivity {
                         binding.option4.setText(question.getOption4());
                     }
                 }
-                else {
 
+                if(s1.equals(catId)){
                     if (index < questionMaths.size()) {
                         binding.questionCounter.setText(String.format("%d/%d", (index + 1), (questionMaths.size())));
                         question = questionMaths.get(index);
@@ -276,6 +294,19 @@ public class quizActivity extends AppCompatActivity {
                         binding.option4.setText(question.getOption4());
                     }
                 }
+
+                if(s4.equals(catId)){
+                    if (index < questionGk.size()) {
+                        binding.questionCounter.setText(String.format("%d/%d", (index + 1), (questionGk.size())));
+                        question = questionGk.get(index);
+                        binding.question.setText(question.getQuestion());
+                        binding.option1.setText(question.getOption1());
+                        binding.option2.setText(question.getOption2());
+                        binding.option3.setText(question.getOption3());
+                        binding.option4.setText(question.getOption4());
+                    }
+                }
+
            }
 
 
@@ -320,7 +351,7 @@ public class quizActivity extends AppCompatActivity {
                         break;
                     case R.id.nextBtn:
                         reset();
-                        if(index < questions.size()) {
+                        if(index < 15) {
                             index++;
                             setNextQuestion();
                         } else {

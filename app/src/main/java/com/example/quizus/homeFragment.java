@@ -41,7 +41,7 @@ public class homeFragment extends Fragment {
         categories.add(new categoryModel("maths" , "Mathematics", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
         categories.add(new categoryModel("science", "Science", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
         categories.add(new categoryModel("history" , "History", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
-        categories.add(new categoryModel("language" , "Language", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
+        categories.add(new categoryModel("gk" , "G.K.", "https://i.ytimg.com/vi/Kp2bYWRQylk/maxresdefault.jpg"));
 
         categoryAdapter adapter = new categoryAdapter(getContext(), categories);
 
