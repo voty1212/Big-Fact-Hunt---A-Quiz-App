@@ -2,6 +2,7 @@ package com.example.quizus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -181,10 +182,12 @@ public class quizActivity extends AppCompatActivity {
 // questions hardcoded
 public class quizActivity extends AppCompatActivity {
     ActivityQuizBinding binding;
-    ArrayList<Question> questionScience, questionMaths, questionGk, questionHistory;
+    ArrayList<Question> questionScience, questionMaths, questionGk, questionHistory, questions;
     int index = 0;
     Question question;
     CountDownTimer timer;
+    int correctAnswers = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -247,7 +250,7 @@ public class quizActivity extends AppCompatActivity {
         setNextQuestion();
     }
 
-    
+
     void reset_timer(){
         timer=new CountDownTimer(30000,1000) {
             @Override
@@ -271,7 +274,21 @@ public class quizActivity extends AppCompatActivity {
                // String s3 = "history";
                 String s4 = "gk";
                 final String catId = getIntent().getStringExtra("catId");
-                if(s2.equals(catId)) {
+
+                if(s1.equals(catId))
+                {
+                    questions = questionMaths;
+                }
+                if(s2.equals(catId))
+                {
+                    questions = questionScience;
+                }
+                if(s4.equals(catId))
+                {
+                    questions = questionGk;
+                }
+
+               /* if(s2.equals(catId)) {
                     if (index < questionScience.size()) {
                         binding.questionCounter.setText(String.format("%d/%d", (index + 1), (questionScience.size())));
                         question = questionScience.get(index);
@@ -282,20 +299,20 @@ public class quizActivity extends AppCompatActivity {
                         binding.option4.setText(question.getOption4());
                     }
                 }
-
-                if(s1.equals(catId)){
-                    if (index < questionMaths.size()) {
-                        binding.questionCounter.setText(String.format("%d/%d", (index + 1), (questionMaths.size())));
-                        question = questionMaths.get(index);
+*/
+           //     if(s1.equals(catId)){
+                    if (index < questions.size()) {
+                        binding.questionCounter.setText(String.format("%d/%d", (index + 1), (questions.size())));
+                        question = questions.get(index);
                         binding.question.setText(question.getQuestion());
                         binding.option1.setText(question.getOption1());
                         binding.option2.setText(question.getOption2());
                         binding.option3.setText(question.getOption3());
                         binding.option4.setText(question.getOption4());
                     }
-                }
+             //   }
 
-                if(s4.equals(catId)){
+              /*  if(s4.equals(catId)){
                     if (index < questionGk.size()) {
                         binding.questionCounter.setText(String.format("%d/%d", (index + 1), (questionGk.size())));
                         question = questionGk.get(index);
@@ -305,7 +322,7 @@ public class quizActivity extends AppCompatActivity {
                         binding.option3.setText(question.getOption3());
                         binding.option4.setText(question.getOption4());
                     }
-                }
+                }*/
 
            }
 
@@ -324,6 +341,7 @@ public class quizActivity extends AppCompatActivity {
                 String Selected_ans= textview.getText().toString();
                 if(Selected_ans.equals(question.getAnswer()))
                 {
+                    correctAnswers++;
                     textview.setBackground(getResources().getDrawable(R.drawable.option_right));
                 }
                 else
@@ -351,11 +369,15 @@ public class quizActivity extends AppCompatActivity {
                         break;
                     case R.id.nextBtn:
                         reset();
-                        if(index < 15) {
+                        if(index < questions.size()-1) {
                             index++;
                             setNextQuestion();
                         } else {
-                            Toast.makeText(this, "Quiz Ended", Toast.LENGTH_SHORT).show();
+                            Intent intent = new Intent(quizActivity.this, resultActivity.class);
+                            intent.putExtra("correct",correctAnswers);
+                            intent.putExtra("total", questions.size());
+                            startActivity(intent);
+                           // Toast.makeText(this, "Quiz Ended", Toast.LENGTH_SHORT).show();
                         }
                         break;
                 }
