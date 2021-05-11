@@ -341,7 +341,7 @@ public class quizActivity extends AppCompatActivity {
                             timer.cancel();
                         TextView selected=(TextView) view;
                         check_answer(selected);
-                        Toast.makeText(this, "Option Clicked", Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(this, "Option Clicked", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nextBtn:
                         reset();
@@ -356,6 +356,8 @@ public class quizActivity extends AppCompatActivity {
                            // Toast.makeText(this, "Quiz Ended", Toast.LENGTH_SHORT).show();
                         }
                         break;
+
+
                 }
             }
         }

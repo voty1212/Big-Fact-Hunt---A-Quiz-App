@@ -2,7 +2,9 @@ package com.example.quizus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.quizus.databinding.ActivityResultBinding;
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,5 +35,15 @@ public class resultActivity extends AppCompatActivity {
                 .document(FirebaseAuth.getInstance().getUid())
                 .update("coinPoints", FieldValue.increment(points));
 
+        binding.restartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(resultActivity.this, mainActivity.class));
+                finish();
+            }
+        });
+
     }
+
+
 }
