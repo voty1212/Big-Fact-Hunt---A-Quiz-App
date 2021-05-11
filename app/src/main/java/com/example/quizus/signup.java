@@ -40,15 +40,14 @@ public class signup extends AppCompatActivity {
         binding.createNewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email, pass, name, referCode;
+                String email, pass, name;
                 int coinPoints = 0;
 
                 email = binding.emailbox.getText().toString();
                 pass = binding.passwordbox.getText().toString();
                 name = binding.namebox.getText().toString();
-                referCode = binding.refercodebox.getText().toString();
 
-                user user = new user(name, email, pass, referCode,coinPoints);
+                user user = new user(name, email, pass, coinPoints);
 
                 dialog.show();
                 auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {

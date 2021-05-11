@@ -2,17 +2,16 @@ package com.example.quizus;
 
 public class user {
 
-    private String name, email, pass, referCode;
+    private String name, email, pass;
     private int coinPoints;
 
     public user() {
     }
 
-    public user(String name, String email, String pass, String referCode, int coinPoints) {
+    public user(String name, String email, String pass, int coinPoints) {
         this.name = name;
         this.email = email;
         this.pass = pass;
-        this.referCode = referCode;
         this.coinPoints = coinPoints;
 
     }
@@ -39,14 +38,6 @@ public class user {
 
     public void setPass(String pass) {
         this.pass = pass;
-    }
-
-    public String getReferCode() {
-        return referCode;
-    }
-
-    public void setReferCode(String referCode) {
-        this.referCode = referCode;
     }
 
     public int getCoinPoints() {

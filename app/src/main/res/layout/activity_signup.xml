@@ -13,7 +13,7 @@
         android:layout_height="100dp"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
         android:layout_marginBottom="15dp"
@@ -31,12 +31,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginBottom="35dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView">
@@ -109,20 +107,6 @@
                 android:ems="10"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:padding="15dp" />
-
-            <EditText
-                android:id="@+id/refercodebox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/textbox"
-                android:drawableLeft="@drawable/user"
-                android:drawablePadding="10dp"
-                android:drawableTint="@color/purple"
-                android:ems="10"
-                android:hint="Refer code"
-                android:inputType="textPersonName"
                 android:padding="15dp" />
 
             <Button
