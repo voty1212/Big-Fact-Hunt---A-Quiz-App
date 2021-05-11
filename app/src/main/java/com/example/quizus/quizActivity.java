@@ -288,19 +288,6 @@ public class quizActivity extends AppCompatActivity {
                     questions = questionGk;
                 }
 
-               /* if(s2.equals(catId)) {
-                    if (index < questionScience.size()) {
-                        binding.questionCounter.setText(String.format("%d/%d", (index + 1), (questionScience.size())));
-                        question = questionScience.get(index);
-                        binding.question.setText(question.getQuestion());
-                        binding.option1.setText(question.getOption1());
-                        binding.option2.setText(question.getOption2());
-                        binding.option3.setText(question.getOption3());
-                        binding.option4.setText(question.getOption4());
-                    }
-                }
-*/
-           //     if(s1.equals(catId)){
                     if (index < questions.size()) {
                         binding.questionCounter.setText(String.format("%d/%d", (index + 1), (questions.size())));
                         question = questions.get(index);
@@ -310,19 +297,7 @@ public class quizActivity extends AppCompatActivity {
                         binding.option3.setText(question.getOption3());
                         binding.option4.setText(question.getOption4());
                     }
-             //   }
 
-              /*  if(s4.equals(catId)){
-                    if (index < questionGk.size()) {
-                        binding.questionCounter.setText(String.format("%d/%d", (index + 1), (questionGk.size())));
-                        question = questionGk.get(index);
-                        binding.question.setText(question.getQuestion());
-                        binding.option1.setText(question.getOption1());
-                        binding.option2.setText(question.getOption2());
-                        binding.option3.setText(question.getOption3());
-                        binding.option4.setText(question.getOption4());
-                    }
-                }*/
 
            }
 

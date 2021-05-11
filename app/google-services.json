@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "956945802401",
-    "project_id": "quiz-app-ed248",
-    "storage_bucket": "quiz-app-ed248.appspot.com"
+    "project_number": "938658315045",
+    "project_id": "big-fact-hunt---a-quiz-app",
+    "storage_bucket": "big-fact-hunt---a-quiz-app.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:956945802401:android:7910437df64a713b963ce0",
+        "mobilesdk_app_id": "1:938658315045:android:4310e1059e02b4f831b8cc",
         "android_client_info": {
           "package_name": "com.example.quizus"
         }
       },
       "oauth_client": [
         {
-          "client_id": "956945802401-d6uo8e6fj2ot8iaaqbl0e1kvbhefvs5e.apps.googleusercontent.com",
+          "client_id": "938658315045-fbhaqdtditvqrt68ro2tjmhd62itvgbb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCbWdgRe-PB3eMkrHv9zT4URqTqEZdj8QE"
+          "current_key": "AIzaSyCt6yjenU6AwMpNxs7MeGxclUikbOmbasA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "956945802401-d6uo8e6fj2ot8iaaqbl0e1kvbhefvs5e.apps.googleusercontent.com",
+              "client_id": "938658315045-fbhaqdtditvqrt68ro2tjmhd62itvgbb.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
