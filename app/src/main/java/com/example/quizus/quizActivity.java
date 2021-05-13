@@ -289,18 +289,18 @@ public class quizActivity extends AppCompatActivity {
                 timer.start();
                 String s1 = "maths";
                 String s2 = "science";
-               // String s3 = "history";
+                String s3 = "history";
                 String s4 = "gk";
                 final String catId = getIntent().getStringExtra("catId");
 
                 if(s1.equals(catId))
-                {
                     questions = questionMaths;
-                }
                 if(s2.equals(catId))
                 {
                     questions = questionScience;
                 }
+                if(s3.equals(catId))
+                    questions = questionHistory;
                 if(s4.equals(catId))
                 {
                     questions = questionGk;
