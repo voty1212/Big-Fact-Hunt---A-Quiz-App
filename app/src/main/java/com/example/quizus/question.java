@@ -4,7 +4,7 @@ public class Question {
 
     private String question, option1, option2, option3, option4, answer;
 
-    public Question() {
+    public Question(String s, String barrackpore, String meerut, String pune, String new_delhi) {
     }
 
     public Question(String question, String option1, String option2, String option3, String option4, String answer) {

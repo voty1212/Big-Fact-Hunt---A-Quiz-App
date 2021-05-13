@@ -247,6 +247,21 @@ public class quizActivity extends AppCompatActivity {
         questionGk.add(new Question("The tropic of cancer does not pass through which of these Indian states ?","Madhya Pradesh","West Bengal","Rajasthan","Odisha","Odisha"));
         questionGk.add(new Question("Fathometer is used to measure","Earthquakes","Rainfall","Ocean depth","Sound intensity","Ocean depth"));
 
+        questionHistory.add(new Question("Mangal Pandey was a sepoy at ","Royal Gorkha Rifle","34th Bengal Native Infantary"," Sikh Regiment","Engineers","34th Bengal Native Infantary"));
+        questionHistory.add(new Question("Second battle of Panipat was fought between?","British and Mughals","Akbar and Hemu"," Babar and Lodi","Shivaji and British","Akbar and Hemu"));
+        questionHistory.add(new Question("Battle of Buxar was fought in?","1961","1962","1963","1966","1962"));
+        questionHistory.add(new Question("Swami Vivekananda attended the \"Parliament of the World's Religions\" in America in the year?","1983","1985","1987","1999","1983"));
+        questionHistory.add(new Question("Maurya Period was from?","320 BC-185 BC ","322 BC-185 BC","315 BC-185 BC","310 BC-185 BC","322 BC-185 BC"));
+        questionHistory.add(new Question("\"Jatakas\" are sacred text associated with:","Hindu","Buddhism","Jainism","Jews","Buddhism"));
+        questionHistory.add(new Question("Chandragupta dethroned the last Nanda ruler, His name was?","Dhananand","Gyananand","Bikhanand","Rehonand","Dhananand"));
+        questionHistory.add(new Question("Chandragupta was succeeded by?","Sannidhata","Ashoka","Hemusara","Bindusara","Bindusara"));
+        questionHistory.add(new Question("The treaty of Srirangapatna was signed between Tipu Sultan and","Robert Clive","Cornwallis","Warren Hastings","Dalhousie","Cornwallis"));
+        questionHistory.add(new Question("Azad Hind Fauj was created with the assistance of","USA","Russia","Japan","Korea","Japan"));
+        questionHistory.add(new Question("The French Revolution took place in the year","1789","1777","1788","1774","1789"));
+        questionHistory.add(new Question("Tipu Sultan was the ruler of ?","Bengal","Maratha","Punjab","Mysore","Mysore"));
+        questionHistory.add(new Question("The first Buddhist Council was held in the reign of?","Ajatashatru","Bimbisara","Ashoka","Kanishka","Ajatashatru"));
+        questionHistory.add(new Question("Who is known as \"Father of Indian Renaissance\"?","Lala Lajpat Rai","Raja Ram Mohan Roy","Shaheed Bhaghat Singh","B. G. Tilak","Raja Ram Mohan Roy"));
+        questionHistory.add(new Question("Ramcharitamanas was written by?","Tulsidas","Kalidas","Kabir","Ravidas","Tulsidas"));
         reset_timer();
         setNextQuestion();
     }
