@@ -260,6 +260,8 @@ public class quizActivity extends AppCompatActivity {
             }
             @Override
             public void onFinish() {
+
+                show_answer();
             }
         };
     }
@@ -300,6 +302,8 @@ public class quizActivity extends AppCompatActivity {
                     }
 
 
+
+
            }
 
 
@@ -337,11 +341,12 @@ public class quizActivity extends AppCompatActivity {
                     case R.id.option_2:
                     case R.id.option_3:
                     case R.id.option_4:
-                        if(timer!=null)
-                            timer.cancel();
-                        TextView selected=(TextView) view;
-                        check_answer(selected);
-                       // Toast.makeText(this, "Option Clicked", Toast.LENGTH_SHORT).show();
+
+                            if (timer != null)
+                                timer.cancel();
+                            TextView selected = (TextView) view;
+                            check_answer(selected);
+                        // Toast.makeText(this, "Option Clicked", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.nextBtn:
                         reset();
