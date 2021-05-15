@@ -14,6 +14,8 @@ public class Question {
         this.option3 = option3;
         this.option4 = option4;
         this.answer = answer;
+        //okay
+        
     }
 
     public String getQuestion() {
