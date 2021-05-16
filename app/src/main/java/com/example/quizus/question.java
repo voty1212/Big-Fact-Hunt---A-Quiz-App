@@ -15,7 +15,7 @@ public class Question {
         this.option4 = option4;
         this.answer = answer;
         //okay
-        
+
     }
 
     public String getQuestion() {
